@@ -6,7 +6,7 @@ def svd_implementation(A):
     # eigendecomposition of A^T A to get V (right singular vectors)
     eigenvalues, V = np.linalg.eig(ATA)
 
-    # sorting eigenvalues and eigenvectors in descending order
+    # sorting eigenvalues and eigenvectors in descending order. we want the most important patterns first
     idx = np.argsort(eigenvalues)[::-1]
     eigenvalues = eigenvalues[idx]
     V = V[:, idx]
